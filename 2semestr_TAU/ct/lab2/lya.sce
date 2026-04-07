@@ -1,0 +1,64 @@
+loadXcosLibs(); loadScicos();
+K1=5.36
+K2=4
+T2=0.5
+K3=1
+T3=0.9
+d=0.9
+
+K1_kol_kr = -1.4
+K1_ap_kr = 1.8
+changed_k1=[1,10,10] 
+
+// апериод когда по экспоненте в бесконечность
+
+function[] = makeGraphK1(nameZCos, nameDirect, start_k)
+    importXcosDiagram(nameZCos)
+    for i = 1:(size(changed_k1)(2))
+        Context.K1=K1
+        //Context.K1=start_k * changed_k1(i)
+        Context.K2=K2
+        Context.T2=T2
+        Context.K3=K3
+        Context.T3=T3
+        Context.d=d
+        scicos_simulate(scs_m,Context);
+        filename = nameDirect + "/K_" + string(Context.K1)
+        xsave(filename + ".scg")
+        xs2png(20011, filename + ".png")
+    end
+endfunction
+
+function[] = makeGraphD(nameZCos, nameDirect, start_d)
+    importXcosDiagram(nameZCos)
+    Context.K1=K1
+    Context.K2=K2
+    Context.T2=T2
+    Context.K3=K3
+    Context.T3=T3
+    Context.d=start_d
+    scicos_simulate(scs_m,Context);
+    filename = nameDirect + "/d_" + string(Context.d)
+    xsave(filename + ".scg")
+    xs2png(20011, filename + ".png")
+endfunction
+
+function[] = makeGraphT2(nameZCos, nameDirect, start_t2)
+    importXcosDiagram(nameZCos)
+    Context.K1=K1
+    Context.K2=K2
+    Context.T2=start_t2
+    Context.K3=K3
+    Context.T3=T3
+    Context.d=d
+    scicos_simulate(scs_m,Context);
+    filename = nameDirect + "/t2_" + string(Context.t2)
+    xsave(filename + ".scg")
+    xs2png(20011, filename + ".png")
+endfunction
+
+makeGraphD("C:\ct\lab2\schema.zcos", "C:\ct\lab2/graph/d", 1.8)
+
+
+
+
