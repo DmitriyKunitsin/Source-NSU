@@ -10,3 +10,6 @@
 [submodule "Arduino"]
 	path = Arduino
 	url = https://github.com/DmitriyKunitsin/Arduino.git
+[submodule "Atopile"]
+	path = Atopile
+	url = https://github.com/DmitriyKunitsin/Atopile.git
