@@ -4,3 +4,6 @@
 [submodule "ESP"]
 	path = ESP
 	url = https://github.com/DmitriyKunitsin/ESP.git
+[submodule "MyBuild123"]
+	path = MyBuild123
+	url = https://github.com/DmitriyKunitsin/MyBuild123.git
