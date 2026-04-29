@@ -7,3 +7,6 @@
 [submodule "MyBuild123"]
 	path = MyBuild123
 	url = https://github.com/DmitriyKunitsin/MyBuild123.git
+[submodule "Arduino"]
+	path = Arduino
+	url = https://github.com/DmitriyKunitsin/Arduino.git
