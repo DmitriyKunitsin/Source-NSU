@@ -1,0 +1,3 @@
+[submodule "FPGA"]
+	path = FPGA
+	url = https://github.com/DmitriyKunitsin/FPGA.git
