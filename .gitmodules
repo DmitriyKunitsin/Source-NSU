@@ -1,3 +1,6 @@
 [submodule "FPGA"]
 	path = FPGA
 	url = https://github.com/DmitriyKunitsin/FPGA.git
+[submodule "ESP"]
+	path = ESP
+	url = https://github.com/DmitriyKunitsin/ESP.git
