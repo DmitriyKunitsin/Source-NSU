@@ -13,3 +13,6 @@
 [submodule "Atopile"]
 	path = Atopile
 	url = https://github.com/DmitriyKunitsin/Atopile.git
+[submodule "ML"]
+	path = ML
+	url = https://github.com/DmitriyKunitsin/ML.git
