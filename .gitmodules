@@ -16,6 +16,9 @@
 [submodule "ML"]
 	path = ML
 	url = https://github.com/DmitriyKunitsin/ML.git
+[submodule "Python"]
+	path = Python
+	url = https://github.com/DmitriyKunitsin/Python.git
 [submodule "Cyber_guard"]
 	path = Cyber_guard
 	url = https://github.com/DmitriyKunitsin/Cyber_guard.git
