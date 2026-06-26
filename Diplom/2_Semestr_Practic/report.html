@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отчёт по практике: анализ FPGA и MCU</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #eef2f5;
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            line-height: 1.5;
+            padding: 40px 20px;
+        }
+
+        /* Слайд-контейнер */
+        .slide {
+            max-width: 1100px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.15);
+            padding: 40px 50px;
+            transition: all 0.2s;
+            page-break-after: avoid;
+            break-inside: avoid;
+        }
+
+        /* Заголовки, как в презентации */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a3e60;
+            margin-bottom: 1rem;
+            border-left: 6px solid #2c7da0;
+            padding-left: 20px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c5a7a;
+            margin: 1.5rem 0 1rem 0;
+            border-bottom: 3px solid #b3d4e5;
+            padding-bottom: 6px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2c7da0;
+            margin-top: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #2c7da0;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        /* Оформление таблиц */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        th {
+            background-color: #e1f0f7;
+            border: 1px solid #bdd4e0;
+            padding: 10px 12px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        td {
+            border: 1px solid #cbdbe2;
+            padding: 8px 12px;
+            text-align: center;
+        }
+
+        .table-caption {
+            font-size: 0.8rem;
+            color: #4a627a;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Формулы */
+        .formula {
+            background: #f4f9fe;
+            padding: 12px 20px;
+            border-radius: 16px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 20px 0;
+            border-left: 4px solid #2c7da0;
+        }
+
+        /* Иллюстрации (SVG) */
+        .figure {
+            background: #fafcff;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: center;
+            border: 1px solid #dce5f0;
+        }
+
+        .fig-caption {
+            font-size: 0.8rem;
+            color: #4a627a;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Блоки с выводами */
+        .conclusion-box {
+            background: #eaf4e8;
+            border-left: 6px solid #2c7da0;
+            padding: 20px 25px;
+            border-radius: 20px;
+            margin: 25px 0;
+        }
+
+        .highlight {
+            background: #fdf8e7;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-weight: 600;
+            color: #b45f06;
+        }
+
+        /* Список литературы */
+        .references {
+            background: #f9f9fc;
+            padding: 20px 30px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        /* Кнопка печати (необязательно) */
+        .print-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #1e4663;
+            color: white;
+            border: none;
+            border-radius: 40px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 100;
+            transition: 0.2s;
+        }
+        .print-btn:hover {
+            background: #0f2e44;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .slide {
+                box-shadow: none;
+                margin: 0;
+                padding: 1.5cm;
+                page-break-after: always;
+                break-inside: avoid;
+            }
+            .print-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<button class="print-btn" onclick="window.print()">📄 Сохранить как PDF</button>
+
+<!-- Слайд 1: Титул -->
+<div class="slide">
+    <div style="text-align: center; margin-bottom: 30px;">
+        <p style="font-size: 0.9rem; color: #2c7da0;">Министерство науки и высшего образования РФ</p>
+        <p style="font-size: 0.9rem; font-weight: 500;">Новосибирский национальный исследовательский государственный университет</p>
+        <p style="font-size: 0.85rem;">Факультет информационных технологий | Кафедра систем информатики</p>
+        <p style="font-size: 0.85rem;">Направление 09.04.01 – Информатика и вычислительная техника (профиль "Интернет вещей")</p>
+        <hr style="margin: 20px 0; border-color: #cce3ed;">
+    </div>
+    <h1 style="text-align: center; border-left: none; font-size: 2rem;">Анализ архитектурной пригодности FPGA и MCU<br>для систем потоковой обработки данных АЦП</h1>
+    <p style="text-align: center; font-size: 1.2rem; margin: 20px 0;">Отчёт о производственной практике (технологической)</p>
+    <div style="margin-top: 40px;">
+        <p><strong>Обучающийся:</strong> Куницин Дмитрий Сергеевич, группа 25226, курс 1</p>
+        <p><strong>Тема задания:</strong> Разработка устройства сопровождения детекторов спектрометрического гамма-каротажа телеметрической системы «Луч»</p>
+        <p><strong>Место практики:</strong> ООО НПП геофизической аппаратуры «Луч», отдел программного обеспечения, г. Новосибирск</p>
+    </div>
+    <div style="margin-top: 50px; text-align: right;">
+        <p>Новосибирск, 2026 г.</p>
+    </div>
+</div>
+
+<!-- Слайд 2: Введение -->
+<div class="slide">
+    <h1>Введение</h1>
+    <p><strong>Цель практики:</strong> Сравнительный анализ MCU и FPGA для высокоскоростной обработки потоковых данных АЦП в спектрометрическом гамма-каротаже и обоснование выбора элементной базы.</p>
+    <p><strong>Задачи:</strong></p>
+    <ul>
+        <li>Определить минимальную частоту дискретизации АЦП.</li>
+        <li>Проанализировать интерфейсы подключения (LVDS, JESD204B, внешний сериализатор).</li>
+        <li>Оценить временные задержки обработки на MCU и FPGA.</li>
+        <li>Сравнить последовательную и конвейерную архитектуры.</li>
+        <li>Выбрать АЦП и тип управляющего устройства.</li>
+    </ul>
+    <p><strong>Актуальность:</strong> В гамма-каротаже требуется оцифровка импульсов ФЭУ с частотой ≥100 МГц. MCU из-за последовательного исполнения не справляются с непрерывным потоком, FPGA обеспечивают реальное время за счёт пространственного параллелизма.</p>
+    <div class="conclusion-box">
+        <p>📌 <strong>Объект исследования:</strong> процесс высокоскоростной обработки данных АЦП.<br>
+        📌 <strong>Предмет исследования:</strong> сравнительная архитектурная пригодность MCU и FPGA.</p>
+    </div>
+</div>
+
+<!-- Слайд 3: Выбор частоты дискретизации -->
+<div class="slide">
+    <h1>1. Обоснование выбора частоты дискретизации АЦП</h1>
+    <p>Исходные данные: время нарастания фронта импульса детектора <strong>t<sub>rise</sub> = 500 нс</strong>, необходимое число точек на фронт <strong>N<sub>points</sub> = 50</strong>.</p>
+    <div class="formula">
+        N<sub>points</sub> = (F<sub>s</sub> · t<sub>rise</sub>) / 1000 &nbsp;&nbsp;(F<sub>s</sub> в МГц, t<sub>rise</sub> в нс)
+    </div>
+    <table>
+        <thead><tr><th>Частота, МГц</th><th>Точек на фронт</th><th>Качество восстановления</th></tr></thead>
+        <tbody>
+            <tr><td>100</td><td>50</td><td>Минимально приемлемое</td></tr>
+            <tr style="background:#e1f0f7;"><td><strong>250</strong></td><td><strong>125</strong></td><td><strong>Хорошее (оптимум)</strong></td></tr>
+            <tr><td>500</td><td>250</td><td>Отличное (избыточно)</td></tr>
+        </tbody>
+    </table>
+    <p>✅ Выбрана частота <strong>250 МГц</strong> – баланс между качеством и сложностью реализации.</p>
+</div>
+
+<!-- Слайд 4: Анализ интерфейсов -->
+<div class="slide">
+    <h1>2. Анализ интерфейсов подключения АЦП к FPGA</h1>
+    <h3>2.1 Параллельный LVDS (AD9480)</h3>
+    <p>8 бит данных + тактовый DCO – 9 дифференциальных пар (18 проводников). Низкая стоимость, простота.</p>
+    <h3>2.2 JESD204B</h3>
+    <p>Сокращает число линий, но цена АЦП (AD9250) ~80 000 руб. → экономически нецелесообразно.</p>
+    <h3>2.3 Внешний сериализатор DS92LV18</h3>
+    <p>Максимальная частота 66 МГц → невозможность работы с 250 МГц (потеря данных).</p>
+    <div class="figure">
+        <svg width="100%" height="140" viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;">
+            <rect x="20" y="30" width="130" height="60" fill="#d9eaff" stroke="#1e3a5f" stroke-width="2" rx="8"/>
+            <text x="85" y="65" text-anchor="middle" font-size="14" font-weight="bold">АЦП AD9480</text>
+            <text x="85" y="82" text-anchor="middle" font-size="11">LVDS (9 пар)</text>
+            <line x1="150" y1="60" x2="210" y2="60" stroke="#2c7da0" stroke-width="2" marker-end="url(#arrow)"/>
+            <rect x="210" y="30" width="130" height="60" fill="#d9eaff" stroke="#1e3a5f" stroke-width="2" rx="8"/>
+            <text x="275" y="65" text-anchor="middle" font-size="14" font-weight="bold">FPGA</text>
+            <text x="275" y="82" text-anchor="middle" font-size="11">конвейер</text>
+            <defs><marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#2c7da0"/></marker></defs>
+        </svg>
+        <div class="fig-caption">Рисунок 1 – Прямое подключение АЦП к FPGA по LVDS</div>
+    </div>
+    <p><strong>Окончательное решение:</strong> использовать AD9480 + параллельный LVDS.</p>
+</div>
+
+<!-- Слайд 5: Тракт данных и задержки MCU -->
+<div class="slide">
+    <h1>3. Характеристики тракта и оценка задержек MCU</h1>
+    <p>Частота АЦП 250 МГц → период отсчёта <strong>4 нс</strong>. Асинхронный режим.</p>
+    <h2>Количественная оценка (MCU на 1 ГГц, гипотетически)</h2>
+    <table>
+        <thead><tr><th>Операция</th><th>Такты</th></tr></thead>
+        <tbody>
+            <tr><td>Опрос флага готовности</td><td>1–2</td></tr>
+            <tr><td>Чтение порта ввода-вывода</td><td>1–2</td></tr>
+            <tr><td>Запись в буферное ОЗУ</td><td>2–3</td></tr>
+            <tr><td>Сравнение с пиком</td><td>1</td></tr>
+            <tr><td>Аккумуляция</td><td>1</td></tr>
+            <tr><td><strong>Итого</strong></td><td><strong>6–10 тактов</strong></td></tr>
+        </tbody>
+    </table>
+    <p>Минимальное время обработки = 6 нс, доступное окно = 4 нс → <span class="highlight">превышение на 50–150%</span>. MCU не успевает.</p>
+    <div class="conclusion-box">
+        <p>❌ Даже при частоте 1 ГГц микроконтроллер архитектурно не способен обслуживать поток 250 МГц.</p>
+    </div>
+</div>
+
+<!-- Слайд 6: Архитектурный предел MCU -->
+<div class="slide">
+    <h1>Архитектурный предел масштабирования MCU</h1>
+    <ul>
+        <li><strong>Модель вычислений:</strong> временной параллелизм (1–4 ядра).</li>
+        <li><strong>Функциональная плотность:</strong> за 4 нс нужно выполнить несколько операций последовательно.</li>
+        <li><strong>Эффект повышения частоты АЦП:</strong> сокращает окно обработки, не уменьшая алгоритмическую сложность.</li>
+    </ul>
+    <p>Повышение тактовой частоты MCU не решает проблему – ограничение фундаментальное.</p>
+</div>
+
+<!-- Слайд 7: Конвейеризация в FPGA -->
+<div class="slide">
+    <h1>Сравнительный анализ конвейеризации в FPGA</h1>
+    <p>FPGA реализует пространственный параллелизм и аппаратный конвейер. Каждая стадия – независимый блок.</p>
+    <table style="font-size: 0.85rem;">
+        <thead><tr><th>Время (нс)</th><th>0</th><th>4</th><th>8</th><th>12</th><th>16</th><th>20</th><th>24</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Данные АЦП</strong></td><td>ADC0</td><td>ADC1</td><td>ADC2</td><td>ADC3</td><td>ADC4</td><td>ADC5</td><td>ADC6</td></tr>
+            <tr><td>MCU</td><td>Чтение ADC0</td><td>Обработка ADC0</td><td>Обработка ADC0</td><td>Нач. чтения ADC1</td><td colspan="3">Потеря данных</td></tr>
+            <tr><td>FPGA ст.1 (чтение)</td><td>ADC0</td><td>ADC1</td><td>ADC2</td><td>ADC3</td><td>ADC4</td><td>ADC5</td><td>ADC6</td></tr>
+            <tr><td>FPGA ст.2 (сравнение)</td><td>—</td><td>ADC0</td><td>ADC1</td><td>ADC2</td><td>ADC3</td><td>ADC4</td><td>ADC5</td></tr>
+            <tr><td>FPGA ст.3 (суммирование)</td><td>—</td><td>—</td><td>ADC0</td><td>ADC1</td><td>ADC2</td><td>ADC3</td><td>ADC4</td></tr>
+            <tr><td>FPGA ст.4 (результат)</td><td>—</td><td>—</td><td>—</td><td>—</td><td>ADC0</td><td>ADC1</td><td>ADC2</td></tr>
+        </tbody>
+    </table>
+    <div class="table-caption">Таблица 1 – 4-стадийный конвейер FPGA против последовательного MCU</div>
+    <p>✅ FPGA после заполнения конвейера выдаёт результат <strong>каждые 4 нс</strong> (1 отсчёт за такт АЦП).</p>
+</div>
+
+<!-- Слайд 8: Масштабирование частоты – FPGA медленнее АЦП -->
+<div class="slide">
+    <h1>Масштабирование частоты: конвейер FPGA медленнее АЦП</h1>
+    <p>Внутренняя логика FPGA может работать на частоте <strong>ниже</strong> частоты дискретизации за счёт десериализации.</p>
+    <div class="formula">
+        F<sub>eff</sub> = F<sub>pipe</sub> × N<sub>samples</sub>
+    </div>
+    <p>Пример: F<sub>pipe</sub> = 100 МГц, N<sub>samples</sub> = 4 (десериализация 4:1) → эффективная пропускная способность <strong>400 МГц</strong>.</p>
+    <p>Для АЦП AD9480 (250 МГц) достаточно конвейера 125 МГц с DDR или 62,5 МГц с 4:1 → <strong>запас по таймингу</strong> и возможность использовать недорогую FPGA.</p>
+    <div class="figure">
+        <svg width="600" height="100" viewBox="0 0 600 100">
+            <rect x="20" y="25" width="120" height="40" fill="#cfe2ff" rx="6"/>
+            <text x="80" y="50" text-anchor="middle" font-size="12">4 отсчёта</text>
+            <text x="80" y="65" text-anchor="middle" font-size="10">за такт 100 МГц</text>
+            <line x1="140" y1="45" x2="170" y2="45" stroke="#2c7da0" stroke-width="2" marker-end="url(#arrow2)"/>
+            <rect x="170" y="25" width="120" height="40" fill="#cfe2ff" rx="6"/>
+            <text x="230" y="50" text-anchor="middle" font-size="12">Конвейер</text>
+            <text x="230" y="65" text-anchor="middle" font-size="10">125 МГц (DDR)</text>
+            <defs><marker id="arrow2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#2c7da0"/></marker></defs>
+        </svg>
+        <div class="fig-caption">Рисунок 2 – Десериализация и понижение тактовой частоты конвейера</div>
+    </div>
+    <p><strong>Вывод:</strong> FPGA не обязана работать на частоте АЦП – это ключевое преимущество перед MCU.</p>
+</div>
+
+<!-- Слайд 9: Выводы и итоги -->
+<div class="slide">
+    <h1>Заключение</h1>
+    <div class="conclusion-box">
+        <p>🔹 <strong>Несостоятельность MCU</strong> в высокочастотных трактах (≥100 МГц) из-за последовательной модели.</p>
+        <p>🔹 <strong>Преимущество FPGA</strong> – пространственный параллелизм и аппаратный конвейер, обеспечивающий обработку каждого отсчёта в реальном времени.</p>
+        <p>🔹 <strong>Выбор элементной базы:</strong> АЦП AD9480 (250 МГц, 8 бит) с параллельным LVDS-интерфейсом, FPGA с десериализацией (конвейер 125 МГц/62,5 МГц).</p>
+        <p>🔹 <strong>Итог:</strong> Для систем потоковой обработки с частотой дискретизации от 100 МГц применение FPGA – архитектурно обоснованная необходимость.</p>
+    </div>
+    <p>Предложенная конфигурация обеспечивает требуемую производительность при разумных экономических затратах и может служить основой макета устройства сопровождения детекторов спектрометрического гамма-каротажа.</p>
+</div>
+
+<!-- Слайд 10: Список литературы -->
+<div class="slide">
+    <h1>Список литературы</h1>
+    <div class="references">
+        <ol style="margin-left: 20px;">
+            <li>AD9480 Datasheet: 8-Bit, 250 MSPS A/D Converter. Analog Devices, 2005.</li>
+            <li>Xilinx 7 Series FPGAs GTP Transceivers User Guide (UG482).</li>
+            <li>JESD204B Standard. JEDEC Solid State Technology Association, 2011.</li>
+            <li>DS92LV18 Datasheet: 18-Bit Bus LVDS Serializer/Deserializer. Texas Instruments, 2010.</li>
+            <li>Хоровиц П., Хилл У. Искусство схемотехники. – М.: Мир, 2014.</li>
+        </ol>
+    </div>
+    <footer style="margin-top: 40px; text-align: center; font-size: 0.8rem; color: #6c86a3;">Новосибирск, 2025 г.</footer>
+</div>
+
+</body>
+</html>
