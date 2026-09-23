@@ -1,0 +1,94 @@
+Delivered-To: d.muravev@g.nsu.ru
+Received: by 2002:a05:7010:448f:b0:20e:7402:f4da with SMTP id e15csp1371752mdf;
+        Wed, 16 Feb 2022 07:02:10 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJz2Og3M/lIamRkBYngfuazf6hKTp70HqY26xF0jggtiKkKuLbiMKVcZbisKXfB/KTCCom3i
+X-Received: by 2002:ac2:5e8e:0:b0:43f:ed00:423a with SMTP id b14-20020ac25e8e000000b0043fed00423amr2382071lfq.668.1645023729716;
+        Wed, 16 Feb 2022 07:02:09 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1645023729; cv=none;
+        d=google.com; s=arc-20160816;
+        b=oSJCVo5r7zRX1fGqVrgchAAMhOJMulO4aoTJda0Lo9hmCUqPIfBn4Kv8+5r4r9Rldu
+         rWXwxzj97Nne1oAyXHrfS7hgTwb6OJGajnTr0pWv4KG9n0RTUwCFGU3PDON58snxv4+0
+         nX5cGqfmNchLJ5D8PX4f4yESoE/wr+DbMx3mTOK9WxJ1NP3vwdd/d2JnskOQtfsAQPy9
+         WLjHZQ6YWXWbQaQwF893rCtqGlIeyj2jrfbpgCc+DfcEIe2FLajPg0HUsrlhgLZ0HTH2
+         qQdW4GR3jUch/lHj4S5sVVH8l9RmgeyBBvNjmacUpzPT5ZCN4niWylfAew4rD+uKSp+O
+         1Qlg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=subject:date:message-id:to:from:mime-version;
+        bh=zYFvJAvjmKNBUwaiydXmVVEE7YfAUXldcoBlyD1PAVE=;
+        b=d6dvBCEBdjX0r7kaNm1isshzSdxFnROziBTTL9svPgy01c3egxDeXRlujpQgWWnrYA
+         kjvNiNp7X/pmOEbWpjkx3MDlG54ovZerhhilpHEVhVeeX61yKq0+d6JPVYnXCervQX/K
+         LI1gnlf1cxKqRKtvl5Zp5nkA4kn/6iH3k+8adalAA2gz5w2b3tvBPYpVtDHEE1XYui0u
+         mCFzaCOtXCQxd3V8IcGZDfQKw5xCxxHuERcXjSdy5kohWHqCrSdrJTYi2ypp7Rs5pqun
+         19Bn3w99ohpSw1bqfX1RiKxp9TNs626milp+Nbz9Cc8LWV9my03vkFPdcXdrfHH+0gJV
+         4Z5g==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=softfail (google.com: domain of transitioning ccnsu.robot@gmail.com does not designate 84.237.49.186 as permitted sender) smtp.mailfrom=ccnsu.robot@gmail.com;
+       dmarc=fail (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <ccnsu.robot@gmail.com>
+Received: from mx2.nsu.ru (mx2.nsu.ru. [84.237.49.186])
+        by mx.google.com with ESMTPS id d14si38061641lfg.16.2022.02.16.07.02.09
+        for <d.muravev@g.nsu.ru>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Wed, 16 Feb 2022 07:02:09 -0800 (PST)
+Received-SPF: softfail (google.com: domain of transitioning ccnsu.robot@gmail.com does not designate 84.237.49.186 as permitted sender) client-ip=84.237.49.186;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning ccnsu.robot@gmail.com does not designate 84.237.49.186 as permitted sender) smtp.mailfrom=ccnsu.robot@gmail.com;
+       dmarc=fail (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Received: from mx1.nsu.ru ([84.237.50.29])
+	by mx2.nsu.ru with esmtp (Exim 4.89)
+	(envelope-from <ccnsu.robot@gmail.com>)
+	id 1nKLom-0006j2-U1
+	for d.muravev@g.nsu.ru; Wed, 16 Feb 2022 22:02:08 +0700
+Received: from ws14.swsoft.nsu.ru ([10.4.16.14])
+	by mx1.nsu.ru with esmtp (Exim 4.82)
+	(envelope-from <ccnsu.robot@gmail.com>)
+	id 1nKLom-0005kW-Ea
+	for d.muravev@g.nsu.ru; Wed, 16 Feb 2022 22:02:08 +0700
+Content-Type: multipart/mixed; boundary="===============1243240697566834935=="
+MIME-Version: 1.0
+From: ccnsu.robot@gmail.com
+To: d.muravev@g.nsu.ru
+Message-Id: <E1nKLom-0005kW-Ea@mx1.nsu.ru>
+Date: Wed, 16 Feb 2022 22:02:08 +0700
+X-SA-Exim-Connect-IP: 10.4.16.14
+X-SA-Exim-Mail-From: ccnsu.robot@gmail.com
+X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on mx1.nsu.ru
+X-Spam-Level: *
+X-Spam-Status: No, score=1.9 required=5.0 tests=ALL_TRUSTED,BAYES_50,
+	FORGED_GMAIL_RCVD,FREEMAIL_FROM,HTML_MESSAGE,HTML_MIME_NO_HTML_TAG,
+	MIME_HTML_ONLY autolearn=no autolearn_force=no version=3.4.2
+Subject: TEST REPORT on code: NSU-FIT-2021-T04L1e06 Ticket No: **2246170093
+X-SA-Exim-Version: 4.2.1 (built Sun, 08 Jan 2012 02:45:44 +0000)
+X-SA-Exim-Scanned: Yes (on mx1.nsu.ru)
+X-KLMS-Rule-ID: 3
+X-KLMS-Message-Action: skipped
+X-KLMS-AntiSpam-Status: not scanned, whitelist
+X-KLMS-AntiPhishing: not scanned, whitelist
+X-KLMS-AntiVirus: Kaspersky Security for Linux Mail Server, version 8.0.3.30, not scanned, whitelist
+
+--===============1243240697566834935==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+
+PHByZSBzdHlsZT0iZm9udC1zaXplOiAxMnB4Ij4K0KPQstCw0LbQsNC10LzRi9C5INCU0LzQuNGC
+0YDQuNC5LAoK0JLQsNGI0LUg0YDQtdGI0LXQvdC40LUg0L/RgNC+0YLQtdGB0YLQuNGA0L7QstCw
+0L3Qvi4K0KLQtdGB0YIg0JLQsNGI0LXQs9C+INGA0LXRiNC10L3QuNGPINCy0YvQv9C+0LvQvdGP
+0LvRgdGPINC90LXRgdC60L7Qu9GM0LrQviDRgNCw0Lcg0Lgg0L3QtSDQstGL0Y/QstC40Lsg0L7R
+iNC40LHQvtC6LgotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0KVGVzdCBjaXJ1Y2l0IHNlZWRlZCB3aXRoIDkyODYKClNlZWQgaWdub3Jl
+ZAoKCgoKCioqKiBTVUNDRVNTISAqKioKCgoKVEVTVCBSRVNVTFRTOiAKCj09PT09PT09PT09PT09
+PT09PT09PT09PT09PT0KCnwgQSAgfHwgQiAgfHwgQyAgfHwgYW5zd2VyIHwKCi0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0KCnwgMCAgfHwgMCAgfHwgMCAgfHwgICAxICAgIHwKCnwgMCAgfHwg
+MCAgfHwgMSAgfHwgICAxICAgIHwKCnwgMCAgfHwgMSAgfHwgMCAgfHwgICAwICAgIHwKCnwgMCAg
+fHwgMSAgfHwgMSAgfHwgICAwICAgIHwKCnwgMSAgfHwgMCAgfHwgMCAgfHwgICAwICAgIHwKCnwg
+MSAgfHwgMCAgfHwgMSAgfHwgICAwICAgIHwKCnwgMSAgfHwgMSAgfHwgMCAgfHwgICAxICAgIHwK
+CnwgMSAgfHwgMSAgfHwgMSAgfHwgICAxICAgIHwKCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0KCgpDb2NvbWFybwrQktCw0Ygg0LTRgNGD0LMg0L/QvtGH0YLQvtCy0YvQuSDRgNC+0LHQvtGC
+LArQrdC60L7RgdC40YHRgtC10LzQsCBDZE0tOApQLlMuOiDQoyDQktCw0YEg0L7RgdGC0LDQu9C4
+0YHRjCDRgdC70LXQtNGD0Y7RidC40LUg0L3QtdCy0YvQv9C+0LvQvdC10L3QvdGL0LUg0LHQuNC7
+0LXRgtGLOgpEYXRlCQlUaWNrZXQJCUV4ZXJjaXNlOgoyMDIxLTEwLTMwCTAwNzk4MjUzMDIJTlNV
+LUZJVC0yMDIxLVQwMUwzZTAxCjIwMjItMDItMTYJMDA5ODY5MjQ0NglOU1UtRklULTIwMjEtVDA0
+TDFlMDcKPC9wcmU+
+
+--===============1243240697566834935==--

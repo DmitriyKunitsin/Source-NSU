@@ -1,0 +1,105 @@
+Delivered-To: d.muravev@g.nsu.ru
+Received: by 2002:a05:7010:448f:b0:20e:7402:f4da with SMTP id e15csp195385mdf;
+        Mon, 14 Feb 2022 21:17:11 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJzKT7SbIEtY4vSjlZzdoYSGUD6URXqDE+P5xM+UOSvpwAFUaPR7x4c5uWpjb8T0KncjjgHL
+X-Received: by 2002:a05:6512:3da0:: with SMTP id k32mr1786475lfv.479.1644902230939;
+        Mon, 14 Feb 2022 21:17:10 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1644902230; cv=none;
+        d=google.com; s=arc-20160816;
+        b=PBqvSLvo2BJwqd6oZcgrjh/FH+Cfm8gSJYsQmb4tXG0j3V95EmEj71fQw1o0aSwfbS
+         /ZRbY5D9tE/SR1h1ax1e+NSw4E9IF/i7ozVCs63tpE1tWUr4vC7PrMybQ2Y8Xu3dc1NF
+         Um4+69YpB/47shq242CYqM/LvFlzLy2JZc9+lGMUEuyOhbYM+CFOr6cCpXQOimosKQdA
+         M1pFdC6LeCmJ6zVg3sNCli0SYVcU6yFLszJT0re0Cl9TJyORb0o2ln70fGmlHN+0bAD4
+         2HlgObwMo6HL0rq3IIXmkpVj8cQVUr6yxdjwwiiPrD9nm0x/icbjOM/ZNy97CgRhT3i2
+         XhgQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=subject:date:message-id:to:from:mime-version;
+        bh=CVyq4zEs7JEL/Qb1Oh4OqZlJmUz+CdzVhowqKwOWSAI=;
+        b=Hnu/o85AePaGU/ai9HgxAFE+t2I1ZXreALlj+rOJ+zq22152sPDi+oEwc1lofjxP7z
+         cfaN2vT6Z9CXSxUOo716jYkYeOKKL7NQhdnOi9vn7IkLk4CEfsNaaY8EITm1i2ayWTqh
+         IUtkPxN3oPL7KV4C+RzTI8X18e1+L5TM9lMVht6Rm9q7heP/HDLfnH7jpi/Z7rLwRnMD
+         REmCE4mM/xUvqw/F0ExtEOxk+zPYqFsbs1+5X29WHk7rORah5QoCYhfLJamPAlFaSM0M
+         xZfRUzp8V7aDic249xXhvODd0n2bklT0S2yPxLhU4pDIBo2HNZ0kciYQgCR17urzJu4m
+         hl7A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=softfail (google.com: domain of transitioning ccnsu.robot@gmail.com does not designate 84.237.49.186 as permitted sender) smtp.mailfrom=ccnsu.robot@gmail.com;
+       dmarc=fail (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <ccnsu.robot@gmail.com>
+Received: from mx2.nsu.ru (mx2.nsu.ru. [84.237.49.186])
+        by mx.google.com with ESMTPS id m10si28316824ljq.47.2022.02.14.21.17.10
+        for <d.muravev@g.nsu.ru>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Mon, 14 Feb 2022 21:17:10 -0800 (PST)
+Received-SPF: softfail (google.com: domain of transitioning ccnsu.robot@gmail.com does not designate 84.237.49.186 as permitted sender) client-ip=84.237.49.186;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning ccnsu.robot@gmail.com does not designate 84.237.49.186 as permitted sender) smtp.mailfrom=ccnsu.robot@gmail.com;
+       dmarc=fail (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Received: from mx1.nsu.ru ([84.237.50.29])
+	by mx2.nsu.ru with esmtp (Exim 4.89)
+	(envelope-from <ccnsu.robot@gmail.com>)
+	id 1nJqD8-0008Cl-6f
+	for d.muravev@g.nsu.ru; Tue, 15 Feb 2022 12:17:10 +0700
+Received: from ws14.swsoft.nsu.ru ([10.4.16.14])
+	by mx1.nsu.ru with esmtp (Exim 4.82)
+	(envelope-from <ccnsu.robot@gmail.com>)
+	id 1nJqD7-0003Sm-MN
+	for d.muravev@g.nsu.ru; Tue, 15 Feb 2022 12:17:09 +0700
+Content-Type: multipart/mixed; boundary="===============0721782788855770923=="
+MIME-Version: 1.0
+From: ccnsu.robot@gmail.com
+To: d.muravev@g.nsu.ru
+Message-Id: <E1nJqD7-0003Sm-MN@mx1.nsu.ru>
+Date: Tue, 15 Feb 2022 12:17:09 +0700
+X-SA-Exim-Connect-IP: 10.4.16.14
+X-SA-Exim-Mail-From: ccnsu.robot@gmail.com
+X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on mx1.nsu.ru
+X-Spam-Level: *
+X-Spam-Status: No, score=1.9 required=5.0 tests=ALL_TRUSTED,BAYES_50,
+	FORGED_GMAIL_RCVD,FREEMAIL_FROM,HTML_MESSAGE,HTML_MIME_NO_HTML_TAG,
+	MIME_HTML_ONLY,UPPERCASE_50_75 autolearn=no autolearn_force=no
+	version=3.4.2
+Subject: TEST REPORT on code: NSU-FIT-2021-T04L1e02 Ticket No: **0097204198
+X-SA-Exim-Version: 4.2.1 (built Sun, 08 Jan 2012 02:45:44 +0000)
+X-SA-Exim-Scanned: Yes (on mx1.nsu.ru)
+X-KLMS-Rule-ID: 3
+X-KLMS-Message-Action: skipped
+X-KLMS-AntiSpam-Status: not scanned, whitelist
+X-KLMS-AntiPhishing: not scanned, whitelist
+X-KLMS-AntiVirus: Kaspersky Security for Linux Mail Server, version 8.0.3.30, not scanned, whitelist
+
+--===============0721782788855770923==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+
+PHByZSBzdHlsZT0iZm9udC1zaXplOiAxMnB4Ij4K0KPQstCw0LbQsNC10LzRi9C5INCU0LzQuNGC
+0YDQuNC5LAoK0JLQsNGI0LUg0YDQtdGI0LXQvdC40LUg0L/RgNC+0YLQtdGB0YLQuNGA0L7QstCw
+0L3Qvi4K0J7QtNC40L0g0LjQtyDRgtC10YHRgtC+0LIg0JLQsNGI0LXQs9C+INGA0LXRiNC10L3Q
+uNGPINCy0YvRj9Cy0LjQuyDRgdC70LXQtNGD0Y7RidGD0Y4g0L7RiNC40LHQutGDOgpUZXN0IGNp
+cnVjaXQgc2VlZGVkIHdpdGggNzM3NwoKU2VlZCBpZ25vcmVkCgpURVNUIFJFU1VMVFM6IAoKPT09
+PT09PT09PT09PT09PT09PT09PT09PT09PQoKfCBBICB8fCBCICB8fCBDICB8fCBhbnN3ZXIgfAoK
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQoKfCAwICB8fCAwICB8fCAwICB8fCAgIDEgICAg
+fAoKKioqIFRIRSBMSU5FIEFCT1ZFIERJRkZFUlMgRlJPTSBDT1JSRUNUIFNPTFVUSU9OOiAqKioK
+CioqKioqKioqKioqKioqKioqKioqKioqKioqKioKCnwgMCAgfHwgMCAgfHwgMCAgfHwgICAwICAg
+IHwKCioqKioqKioqKioqKioqKioqKioqKioqKioqKioKCgoKfCAwICB8fCAwICB8fCAxICB8fCAg
+IDEgICAgfAoKKioqIFRIRSBMSU5FIEFCT1ZFIERJRkZFUlMgRlJPTSBDT1JSRUNUIFNPTFVUSU9O
+OiAqKioKCioqKioqKioqKioqKioqKioqKioqKioqKioqKioKCnwgMCAgfHwgMCAgfHwgMSAgfHwg
+ICAwICAgIHwKCioqKioqKioqKioqKioqKioqKioqKioqKioqKioKCgoKfCAwICB8fCAxICB8fCAw
+ICB8fCAgIDAgICAgfAoKKioqIFRIRSBMSU5FIEFCT1ZFIERJRkZFUlMgRlJPTSBDT1JSRUNUIFNP
+TFVUSU9OOiAqKioKCioqKioqKioqKioqKioqKioqKioqKioqKioqKioKCnwgMCAgfHwgMSAgfHwg
+MCAgfHwgICAxICAgIHwKCioqKioqKioqKioqKioqKioqKioqKioqKioqKioKCgoKfCAwICB8fCAx
+ICB8fCAxICB8fCAgIDAgICAgfAoKKioqIFRIRSBMSU5FIEFCT1ZFIERJRkZFUlMgRlJPTSBDT1JS
+RUNUIFNPTFVUSU9OOiAqKioKCioqKioqKioqKioqKioqKioqKioqKioqKioqKioKCnwgMCAgfHwg
+MSAgfHwgMSAgfHwgICAxICAgIHwKCioqKioqKioqKioqKioqKioqKioqKioqKioqKioKCgoKfCAx
+ICB8fCAwICB8fCAwICB8fCAgIDAgICAgfAoKKioqIFRIRSBMSU5FIEFCT1ZFIERJRkZFUlMgRlJP
+TSBDT1JSRUNUIFNPTFVUSU9OOiAqKioKCioqKioqKioqKioqKioqKioqKioqKioqKioqKioKCnwg
+MSAgfHwgMCAgfHwgMCAgfHwgICAxICAgIHwKCioqKioqKioqKioqKioqKioqKioqKioqKioqKioK
+CgoKfCAxICB8fCAwICB8fCAxICB8fCAgIDAgICAgfAoKKioqIFRIRSBMSU5FIEFCT1ZFIERJRkZF
+UlMgRlJPTSBDT1JSRUNUIFNPTFVUSU9OOiAqKioKCioqKioqKioqKioqKioqKioqKioqKioqKioq
+KioKCnwgMSAgfHwgMCAgfHwgMSAgfHwgICAxICAgIHwKCioqKioqKioqKioqKioqKioqKioqKioq
+KioqKioKCgoKfCAxICB8fCAxICB8fCAwICB8fCAgIDAgICAgfAoKfCAxICB8fCAxICB8fCAxICB8
+fCAgIDAgICAgfAoKLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQoKCkNvY29tYXJvCtCS0LDR
+iCDQtNGA0YPQsyDQv9C+0YfRgtC+0LLRi9C5INGA0L7QsdC+0YIsCtCt0LrQvtGB0LjRgdGC0LXQ
+vNCwIENkTS04CjwvcHJlPg==
+
+--===============0721782788855770923==--

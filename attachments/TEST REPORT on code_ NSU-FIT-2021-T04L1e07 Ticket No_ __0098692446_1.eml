@@ -1,0 +1,298 @@
+MIME-Version: 1.0
+Date: Wed, 16 Feb 2022 22:26:27 +0700
+References: <E1nKLtf-0005wX-Gc@mx1.nsu.ru>
+In-Reply-To: <E1nKLtf-0005wX-Gc@mx1.nsu.ru>
+Message-ID: <CAByzxqj=bXC8TpOTSmcnA9FRPbVzn9su1c3wfWdQKjo-krqTNQ@mail.gmail.com>
+Subject: Re: TEST REPORT on code: NSU-FIT-2021-T04L1e07 Ticket No: **0098692446
+From: =?UTF-8?B?0JzRg9GA0LDQstGM0ZHQsiwg0JTQvNC40YLRgNC40Lkg0JLQu9Cw0LTQuNC80LjRgNC+0LLQuA==?=
+	=?UTF-8?B?0Yc=?= <d.muravev@g.nsu.ru>
+To: ccnsu.robot@gmail.com
+Content-Type: multipart/mixed; boundary="0000000000000f44b805d8244624"
+
+--0000000000000f44b805d8244624
+Content-Type: multipart/alternative; boundary="0000000000000f44b705d8244622"
+
+--0000000000000f44b705d8244622
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+=D1=81=D1=80, 16 =D1=84=D0=B5=D0=B2=D1=80. 2022 =D0=B3. =D0=B2 22:07, <ccns=
+u.robot@gmail.com>:
+
+> =D0=A3=D0=B2=D0=B0=D0=B6=D0=B0=D0=B5=D0=BC=D1=8B=D0=B9 =D0=94=D0=BC=D0=B8=
+=D1=82=D1=80=D0=B8=D0=B9,
+>
+> =D0=92=D0=B0=D1=88=D0=B5 =D1=80=D0=B5=D1=88=D0=B5=D0=BD=D0=B8=D0=B5 =D0=
+=BF=D1=80=D0=BE=D1=82=D0=B5=D1=81=D1=82=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=
+=D0=BE.
+> =D0=9E=D0=B4=D0=B8=D0=BD =D0=B8=D0=B7 =D1=82=D0=B5=D1=81=D1=82=D0=BE=D0=
+=B2 =D0=92=D0=B0=D1=88=D0=B5=D0=B3=D0=BE =D1=80=D0=B5=D1=88=D0=B5=D0=BD=D0=
+=B8=D1=8F =D0=B2=D1=8B=D1=8F=D0=B2=D0=B8=D0=BB =D1=81=D0=BB=D0=B5=D0=B4=D1=
+=83=D1=8E=D1=89=D1=83=D1=8E =D0=BE=D1=88=D0=B8=D0=B1=D0=BA=D1=83:
+> Test cirucit seeded with 470
+>
+> Seed ignored
+>
+> TEST RESULTS:
+>
+> =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D
+>
+> | A  || B  || C  || answer |
+>
+> ----------------------------
+>
+> | 0  || 0  || 0  ||   1    |
+>
+> *** THE LINE ABOVE DIFFERS FROM CORRECT SOLUTION: ***
+>
+> ****************************
+>
+> | 0  || 0  || 0  ||   0    |
+>
+> ****************************
+>
+>
+>
+> | 0  || 0  || 1  ||   0    |
+>
+> | 0  || 1  || 0  ||   0    |
+>
+> *** THE LINE ABOVE DIFFERS FROM CORRECT SOLUTION: ***
+>
+> ****************************
+>
+> | 0  || 1  || 0  ||   1    |
+>
+> ****************************
+>
+>
+>
+> | 0  || 1  || 1  ||   1    |
+>
+> *** THE LINE ABOVE DIFFERS FROM CORRECT SOLUTION: ***
+>
+> ****************************
+>
+> | 0  || 1  || 1  ||   0    |
+>
+> ****************************
+>
+>
+>
+> | 1  || 0  || 0  ||   0    |
+>
+> | 1  || 0  || 1  ||   1    |
+>
+> | 1  || 1  || 0  ||   1    |
+>
+> *** THE LINE ABOVE DIFFERS FROM CORRECT SOLUTION: ***
+>
+> ****************************
+>
+> | 1  || 1  || 0  ||   0    |
+>
+> ****************************
+>
+>
+>
+> | 1  || 1  || 1  ||   0    |
+>
+> ----------------------------
+>
+>
+> Cocomaro
+> =D0=92=D0=B0=D1=88 =D0=B4=D1=80=D1=83=D0=B3 =D0=BF=D0=BE=D1=87=D1=82=D0=
+=BE=D0=B2=D1=8B=D0=B9 =D1=80=D0=BE=D0=B1=D0=BE=D1=82,
+> =D0=AD=D0=BA=D0=BE=D1=81=D0=B8=D1=81=D1=82=D0=B5=D0=BC=D0=B0 CdM-8
+>
+>
+
+--0000000000000f44b705d8244622
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" =
+class=3D"gmail_attr">=D1=81=D1=80, 16 =D1=84=D0=B5=D0=B2=D1=80. 2022 =D0=B3=
+. =D0=B2 22:07, &lt;<a href=3D"mailto:ccnsu.robot@gmail.com">ccnsu.robot@gm=
+ail.com</a>&gt;:<br></div><blockquote class=3D"gmail_quote" style=3D"margin=
+:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"=
+><pre style=3D"font-size:12px">=D0=A3=D0=B2=D0=B0=D0=B6=D0=B0=D0=B5=D0=BC=
+=D1=8B=D0=B9 =D0=94=D0=BC=D0=B8=D1=82=D1=80=D0=B8=D0=B9,
+
+=D0=92=D0=B0=D1=88=D0=B5 =D1=80=D0=B5=D1=88=D0=B5=D0=BD=D0=B8=D0=B5 =D0=BF=
+=D1=80=D0=BE=D1=82=D0=B5=D1=81=D1=82=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=D0=
+=BE.
+=D0=9E=D0=B4=D0=B8=D0=BD =D0=B8=D0=B7 =D1=82=D0=B5=D1=81=D1=82=D0=BE=D0=B2 =
+=D0=92=D0=B0=D1=88=D0=B5=D0=B3=D0=BE =D1=80=D0=B5=D1=88=D0=B5=D0=BD=D0=B8=
+=D1=8F =D0=B2=D1=8B=D1=8F=D0=B2=D0=B8=D0=BB =D1=81=D0=BB=D0=B5=D0=B4=D1=83=
+=D1=8E=D1=89=D1=83=D1=8E =D0=BE=D1=88=D0=B8=D0=B1=D0=BA=D1=83:
+Test cirucit seeded with 470
+
+Seed ignored
+
+TEST RESULTS:=20
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D
+
+| A  || B  || C  || answer |
+
+----------------------------
+
+| 0  || 0  || 0  ||   1    |
+
+*** THE LINE ABOVE DIFFERS FROM CORRECT SOLUTION: ***
+
+****************************
+
+| 0  || 0  || 0  ||   0    |
+
+****************************
+
+
+
+| 0  || 0  || 1  ||   0    |
+
+| 0  || 1  || 0  ||   0    |
+
+*** THE LINE ABOVE DIFFERS FROM CORRECT SOLUTION: ***
+
+****************************
+
+| 0  || 1  || 0  ||   1    |
+
+****************************
+
+
+
+| 0  || 1  || 1  ||   1    |
+
+*** THE LINE ABOVE DIFFERS FROM CORRECT SOLUTION: ***
+
+****************************
+
+| 0  || 1  || 1  ||   0    |
+
+****************************
+
+
+
+| 1  || 0  || 0  ||   0    |
+
+| 1  || 0  || 1  ||   1    |
+
+| 1  || 1  || 0  ||   1    |
+
+*** THE LINE ABOVE DIFFERS FROM CORRECT SOLUTION: ***
+
+****************************
+
+| 1  || 1  || 0  ||   0    |
+
+****************************
+
+
+
+| 1  || 1  || 1  ||   0    |
+
+----------------------------
+
+
+Cocomaro
+=D0=92=D0=B0=D1=88 =D0=B4=D1=80=D1=83=D0=B3 =D0=BF=D0=BE=D1=87=D1=82=D0=BE=
+=D0=B2=D1=8B=D0=B9 =D1=80=D0=BE=D0=B1=D0=BE=D1=82,
+=D0=AD=D0=BA=D0=BE=D1=81=D0=B8=D1=81=D1=82=D0=B5=D0=BC=D0=B0 CdM-8
+</pre></blockquote></div>
+
+--0000000000000f44b705d8244622--
+--0000000000000f44b805d8244624
+Content-Type: application/octet-stream; name="NSU-FIT-2021-T04L1e07.circ"
+Content-Disposition: attachment; filename="NSU-FIT-2021-T04L1e07.circ"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_kzppis6g0
+Content-ID: <f_kzppis6g0>
+
+PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8
+cHJvamVjdCBzb3VyY2U9IjIuNy4xIiB2ZXJzaW9uPSIxLjAiPg0KVGhpcyBmaWxlIGlzIGludGVu
+ZGVkIHRvIGJlIGxvYWRlZCBieSBMb2dpc2ltIChodHRwOi8vd3d3LmNidXJjaC5jb20vbG9naXNp
+bS8pLg0KPGxpYiBkZXNjPSIjV2lyaW5nIiBuYW1lPSIwIj4NCiAgICA8dG9vbCBuYW1lPSJTcGxp
+dHRlciI+DQogICAgICA8YSBuYW1lPSJmYWNpbmciIHZhbD0ibm9ydGgiLz4NCiAgICAgIDxhIG5h
+bWU9ImZhbm91dCIgdmFsPSIxIi8+DQogICAgICA8YSBuYW1lPSJpbmNvbWluZyIgdmFsPSI0Ii8+
+DQogICAgICA8YSBuYW1lPSJhcHBlYXIiIHZhbD0iY2VudGVyIi8+DQogICAgICA8YSBuYW1lPSJi
+aXQwIiB2YWw9Im5vbmUiLz4NCiAgICAgIDxhIG5hbWU9ImJpdDEiIHZhbD0ibm9uZSIvPg0KICAg
+ICAgPGEgbmFtZT0iYml0MiIgdmFsPSIwIi8+DQogICAgICA8YSBuYW1lPSJiaXQzIiB2YWw9Im5v
+bmUiLz4NCiAgICA8L3Rvb2w+DQogICAgPHRvb2wgbmFtZT0iUGluIj4NCiAgICAgIDxhIG5hbWU9
+ImZhY2luZyIgdmFsPSJ3ZXN0Ii8+DQogICAgICA8YSBuYW1lPSJ0cmlzdGF0ZSIgdmFsPSJmYWxz
+ZSIvPg0KICAgICAgPGEgbmFtZT0ibGFiZWwiIHZhbD0iYnVzIDAiLz4NCiAgICA8L3Rvb2w+DQog
+ICAgPHRvb2wgbmFtZT0iUHJvYmUiPg0KICAgICAgPGEgbmFtZT0iZmFjaW5nIiB2YWw9InNvdXRo
+Ii8+DQogICAgICA8YSBuYW1lPSJyYWRpeCIgdmFsPSIxNiIvPg0KICAgIDwvdG9vbD4NCiAgICA8
+dG9vbCBuYW1lPSJUdW5uZWwiPg0KICAgICAgPGEgbmFtZT0id2lkdGgiIHZhbD0iOCIvPg0KICAg
+ICAgPGEgbmFtZT0ibGFiZWwiIHZhbD0idmVjLWFkciIvPg0KICAgICAgPGEgbmFtZT0ibGFiZWxm
+b250IiB2YWw9IlNhbnNTZXJpZiBwbGFpbiA5Ii8+DQogICAgPC90b29sPg0KICAgIDx0b29sIG5h
+bWU9IlB1bGwgUmVzaXN0b3IiPg0KICAgICAgPGEgbmFtZT0iZmFjaW5nIiB2YWw9Im5vcnRoIi8+
+DQogICAgPC90b29sPg0KICA8L2xpYj4NCiAgPGxpYiBkZXNjPSIjR2F0ZXMiIG5hbWU9IjEiLz4N
+CiAgPGxpYiBkZXNjPSIjUGxleGVycyIgbmFtZT0iMiIvPg0KICA8bGliIGRlc2M9IiNBcml0aG1l
+dGljIiBuYW1lPSIzIi8+DQogIDxsaWIgZGVzYz0iI01lbW9yeSIgbmFtZT0iNCI+DQogICAgPHRv
+b2wgbmFtZT0iUk9NIj4NCiAgICAgIDxhIG5hbWU9ImNvbnRlbnRzIj5hZGRyL2RhdGE6IDggOA0K
+MA0KPC9hPg0KICAgIDwvdG9vbD4NCiAgPC9saWI+DQogIDxsaWIgZGVzYz0iI0kvTyIgbmFtZT0i
+NSIvPg0KICA8bGliIGRlc2M9IiNCYXNlIiBuYW1lPSI2Ij4NCiAgICA8dG9vbCBuYW1lPSJUZXh0
+IFRvb2wiPg0KICAgICAgPGEgbmFtZT0idGV4dCIgdmFsPSIiLz4NCiAgICAgIDxhIG5hbWU9ImZv
+bnQiIHZhbD0iU2Fuc1NlcmlmIHBsYWluIDEyIi8+DQogICAgICA8YSBuYW1lPSJoYWxpZ24iIHZh
+bD0iY2VudGVyIi8+DQogICAgICA8YSBuYW1lPSJ2YWxpZ24iIHZhbD0iYmFzZSIvPg0KICAgIDwv
+dG9vbD4NCiAgPC9saWI+DQogIDxtYWluIG5hbWU9Im15Y2lyY3VpdCIvPg0KICA8b3B0aW9ucz4N
+CiAgICA8YSBuYW1lPSJnYXRlVW5kZWZpbmVkIiB2YWw9Imlnbm9yZSIvPg0KICAgIDxhIG5hbWU9
+InNpbWxpbWl0IiB2YWw9IjEwMDAiLz4NCiAgICA8YSBuYW1lPSJzaW1yYW5kIiB2YWw9IjAiLz4N
+CiAgPC9vcHRpb25zPg0KICA8bWFwcGluZ3M+DQogICAgPHRvb2wgbGliPSI2IiBtYXA9IkJ1dHRv
+bjIiIG5hbWU9Ik1lbnUgVG9vbCIvPg0KICAgIDx0b29sIGxpYj0iNiIgbWFwPSJDdHJsIEJ1dHRv
+bjEiIG5hbWU9Ik1lbnUgVG9vbCIvPg0KICAgIDx0b29sIGxpYj0iNiIgbWFwPSJCdXR0b24zIiBu
+YW1lPSJNZW51IFRvb2wiLz4NCiAgPC9tYXBwaW5ncz4NCiAgPHRvb2xiYXI+DQogICAgPHRvb2wg
+bGliPSI2IiBuYW1lPSJQb2tlIFRvb2wiLz4NCiAgICA8dG9vbCBsaWI9IjYiIG5hbWU9IkVkaXQg
+VG9vbCIvPg0KICAgIDx0b29sIGxpYj0iNiIgbmFtZT0iVGV4dCBUb29sIj4NCiAgICAgIDxhIG5h
+bWU9InRleHQiIHZhbD0iIi8+DQogICAgICA8YSBuYW1lPSJmb250IiB2YWw9IlNhbnNTZXJpZiBw
+bGFpbiAxMiIvPg0KICAgICAgPGEgbmFtZT0iaGFsaWduIiB2YWw9ImNlbnRlciIvPg0KICAgICAg
+PGEgbmFtZT0idmFsaWduIiB2YWw9ImJhc2UiLz4NCiAgICA8L3Rvb2w+DQogICAgPHNlcC8+DQog
+ICAgPHRvb2wgbGliPSIwIiBuYW1lPSJQaW4iPg0KICAgICAgPGEgbmFtZT0idHJpc3RhdGUiIHZh
+bD0iZmFsc2UiLz4NCiAgICA8L3Rvb2w+DQogICAgPHRvb2wgbGliPSIwIiBuYW1lPSJQaW4iPg0K
+ICAgICAgPGEgbmFtZT0iZmFjaW5nIiB2YWw9Indlc3QiLz4NCiAgICAgIDxhIG5hbWU9Im91dHB1
+dCIgdmFsPSJ0cnVlIi8+DQogICAgICA8YSBuYW1lPSJsYWJlbGxvYyIgdmFsPSJlYXN0Ii8+DQog
+ICAgPC90b29sPg0KICAgIDx0b29sIGxpYj0iMSIgbmFtZT0iTk9UIEdhdGUiLz4NCiAgICA8dG9v
+bCBsaWI9IjEiIG5hbWU9IkFORCBHYXRlIi8+DQogICAgPHRvb2wgbGliPSIxIiBuYW1lPSJPUiBH
+YXRlIi8+DQogIDwvdG9vbGJhcj4NCiAgPGNpcmN1aXQgbmFtZT0ibXljaXJjdWl0Ij4NCiAgICA8
+YSBuYW1lPSJjaXJjdWl0IiB2YWw9Im15Y2lyY3VpdCIvPg0KICAgIDxhIG5hbWU9ImNsYWJlbCIg
+dmFsPSIiLz4NCiAgICA8YSBuYW1lPSJjbGFiZWx1cCIgdmFsPSJlYXN0Ii8+DQogICAgPGEgbmFt
+ZT0iY2xhYmVsZm9udCIgdmFsPSJTYW5zU2VyaWYgcGxhaW4gMTIiLz4NCiAgICA8d2lyZSBmcm9t
+PSIoMjcwLDI4MCkiIHRvPSIoMzYwLDI4MCkiLz4NCiAgICA8d2lyZSBmcm9tPSIoNDAwLDQ3MCki
+IHRvPSIoNDMwLDQ3MCkiLz4NCiAgICA8d2lyZSBmcm9tPSIoNDMwLDE3MCkiIHRvPSIoNDYwLDE3
+MCkiLz4NCiAgICA8d2lyZSBmcm9tPSIoMTEwLDEwMCkiIHRvPSIoMjAwLDEwMCkiLz4NCiAgICA8
+d2lyZSBmcm9tPSIoMTkwLDQ5MCkiIHRvPSIoMzQwLDQ5MCkiLz4NCiAgICA8d2lyZSBmcm9tPSIo
+MTgwLDIwMCkiIHRvPSIoMTgwLDQwMCkiLz4NCiAgICA8d2lyZSBmcm9tPSIoNDMwLDE3MCkiIHRv
+PSIoNDMwLDQ3MCkiLz4NCiAgICA8d2lyZSBmcm9tPSIoMjAwLDEwMCkiIHRvPSIoMjAwLDQwMCki
+Lz4NCiAgICA8d2lyZSBmcm9tPSIoMjcwLDI4MCkiIHRvPSIoMjcwLDQ2MCkiLz4NCiAgICA8d2ly
+ZSBmcm9tPSIoNDIwLDE3MCkiIHRvPSIoNDMwLDE3MCkiLz4NCiAgICA8d2lyZSBmcm9tPSIoMjgw
+LDE1MCkiIHRvPSIoMjkwLDE1MCkiLz4NCiAgICA8d2lyZSBmcm9tPSIoMjgwLDE3MCkiIHRvPSIo
+MjkwLDE3MCkiLz4NCiAgICA8d2lyZSBmcm9tPSIoMzUwLDE2MCkiIHRvPSIoMzYwLDE2MCkiLz4N
+CiAgICA8d2lyZSBmcm9tPSIoMzQwLDQ5MCkiIHRvPSIoMzUwLDQ5MCkiLz4NCiAgICA8d2lyZSBm
+cm9tPSIoMzQwLDQ2MCkiIHRvPSIoMzUwLDQ2MCkiLz4NCiAgICA8d2lyZSBmcm9tPSIoMTkwLDQ3
+MCkiIHRvPSIoMTkwLDQ5MCkiLz4NCiAgICA8d2lyZSBmcm9tPSIoMTEwLDE1MCkiIHRvPSIoMjgw
+LDE1MCkiLz4NCiAgICA8d2lyZSBmcm9tPSIoMTEwLDIwMCkiIHRvPSIoMTgwLDIwMCkiLz4NCiAg
+ICA8d2lyZSBmcm9tPSIoMTgwLDE3MCkiIHRvPSIoMTgwLDIwMCkiLz4NCiAgICA8d2lyZSBmcm9t
+PSIoMzYwLDE2MCkiIHRvPSIoMzYwLDI4MCkiLz4NCiAgICA8d2lyZSBmcm9tPSIoMjcwLDQ2MCki
+IHRvPSIoMzQwLDQ2MCkiLz4NCiAgICA8d2lyZSBmcm9tPSIoMTgwLDE3MCkiIHRvPSIoMjgwLDE3
+MCkiLz4NCiAgICA8Y29tcCBsaWI9IjEiIGxvYz0iKDE5MCw0NzApIiBuYW1lPSJYTk9SIEdhdGUi
+Pg0KICAgICAgPGEgbmFtZT0iZmFjaW5nIiB2YWw9InNvdXRoIi8+DQogICAgPC9jb21wPg0KICAg
+IDxjb21wIGxpYj0iMCIgbG9jPSIoMTEwLDEwMCkiIG5hbWU9IlBpbiI+DQogICAgICA8YSBuYW1l
+PSJ0cmlzdGF0ZSIgdmFsPSJmYWxzZSIvPg0KICAgICAgPGEgbmFtZT0ibGFiZWwiIHZhbD0iQSIv
+Pg0KICAgIDwvY29tcD4NCiAgICA8Y29tcCBsaWI9IjAiIGxvYz0iKDExMCwyMDApIiBuYW1lPSJQ
+aW4iPg0KICAgICAgPGEgbmFtZT0idHJpc3RhdGUiIHZhbD0iZmFsc2UiLz4NCiAgICAgIDxhIG5h
+bWU9ImxhYmVsIiB2YWw9IkMiLz4NCiAgICA8L2NvbXA+DQogICAgPGNvbXAgbGliPSIxIiBsb2M9
+IigzNTAsMTYwKSIgbmFtZT0iWE5PUiBHYXRlIi8+DQogICAgPGNvbXAgbGliPSIxIiBsb2M9Iig0
+MDAsNDcwKSIgbmFtZT0iWE9SIEdhdGUiLz4NCiAgICA8Y29tcCBsaWI9IjAiIGxvYz0iKDExMCwx
+NTApIiBuYW1lPSJQaW4iPg0KICAgICAgPGEgbmFtZT0idHJpc3RhdGUiIHZhbD0iZmFsc2UiLz4N
+CiAgICAgIDxhIG5hbWU9ImxhYmVsIiB2YWw9IkIiLz4NCiAgICA8L2NvbXA+DQogICAgPGNvbXAg
+bGliPSIwIiBsb2M9Iig0NjAsMTcwKSIgbmFtZT0iUGluIj4NCiAgICAgIDxhIG5hbWU9ImZhY2lu
+ZyIgdmFsPSJ3ZXN0Ii8+DQogICAgICA8YSBuYW1lPSJvdXRwdXQiIHZhbD0idHJ1ZSIvPg0KICAg
+ICAgPGEgbmFtZT0idHJpc3RhdGUiIHZhbD0iZmFsc2UiLz4NCiAgICAgIDxhIG5hbWU9ImxhYmVs
+IiB2YWw9IlIiLz4NCiAgICAgIDxhIG5hbWU9ImxhYmVsbG9jIiB2YWw9ImVhc3QiLz4NCiAgICA8
+L2NvbXA+DQogIDwvY2lyY3VpdD4NCjwvcHJvamVjdD4NCg==
+--0000000000000f44b805d8244624--
